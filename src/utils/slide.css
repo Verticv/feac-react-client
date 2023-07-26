@@ -1,0 +1,56 @@
+.wrap .banner {
+  animation: banneranimation 15s infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+.wrap:hover .banner {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* .banner {
+  animation: banneranimation 15s infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.banner:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+} */
+
+@keyframes banneranimation {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 500px;
+  }
+}
+
+#middle-list {
+  animation: slide 15s linear infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+#middle-list:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -520px, 0);
+    /* The image width */
+  }
+}
