@@ -3,16 +3,21 @@ import { TypeAnimation } from "react-type-animation";
 import BG from "./assets/bg.mp4";
 import X from "./assets/x.png";
 import music from "./assets/music.mp3";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SiOpensea } from "react-icons/si";
 import { PiSpeakerSimpleHighFill, PiSpeakerSimpleXFill } from "react-icons/pi";
 import "./utils/slide.css";
 
 function App() {
+  const videoRef = useRef();
   const [radius, setRadius] = useState(0);
-  //inside your component function.
   const [audio] = useState(typeof Audio !== "undefined" && new Audio(music)); //this will prevent rendering errors on NextJS since NodeJs doesn't recognise HTML tags neither its libs.
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    videoRef.current.playbackRate = 0.1;
+  }, []);
+
   useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
   }, [isPlaying, audio]);
@@ -51,85 +56,13 @@ function App() {
         style={{ minHeight: "calc(200svh - 3.5rem)" }}
         className="p-4 absolute top-16 flex justify-between w-full text-gray-500 space-x-4 px-8 overflow-y-auto z-20  "
       >
-        <div className="w-full">
+        <div style={{ width: "16%" }} className="w-full">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              `Once upon a time, in a world where the tech-savvy and the artistic minds collided, a group of daring pioneers emerged as the 'Fucking Early Adopted Club.'\n 
-          Yes, you heard that right, they were so early to adopt new technology that they practically had their own time zone!\n
-          `,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `Their journey began when they stumbled upon the mystical Apple Vision Pro. \n
-          The club members hailed themselves as "fucking early adopted" because they were the first ones to explore the wonders of this visionary tool.\n
-          It was like seeing into the future, only with an artsy twist!\n
-          `,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `In the club, everyone was a hype artist, and their creative genius knew no bounds.\n
-              They embraced the Apple Vision Pro and unleashed its potential to create masterpieces that transcended imagination.\n
-              Each piece of art had a touch of tech wizardry and an explosion of hype, making their works the talk of the digital town.
-          `,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `But the club didn't stop there; they had bigger dreams in mind. They decided to embark on a mission to bring nature to the realm of space computing. Thus, the idea of the "Nature Render Image" for the Vision Pro app was born. With this third app during the space computing era, they aimed to merge the digital world with the serene beauty of nature.`,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `Using their combined skills and expertise, the Fucking Early Adopted Club set out to create the most awe-inspiring, window-into-nature experience for users. Picture this: you're working on your computer, and suddenly, the Vision Pro app identifies your window and fills it with a breathtaking nature render image. It's like having a virtual nature retreat right at your desk!`,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `As the club continued to grow, they attracted artists, tech enthusiasts, and nature lovers from all corners of the digital universe. Each day brought new challenges and opportunities for creative brilliance. They organized virtual art exhibitions that made the metaverse gasp in admiration.`,
-            ]}
-            wrapper="span"
-            speed={65}
-            style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
-          />
-        </div>
-        <div className="w-full">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `One day, they even dared to ask Siri to join the club. After all, Siri had witnessed their impressive artistry and undeniable passion for technology. Though Siri politely declined the offer, the club members found humor in their audacious request.
+              `Hello world..
+              We are F!@#ing Early Adopted Club(FEAC).
+              FEAC was born from the concern of "How should we (artists) respond as new technologies are released daily, and the scope of AI's influence expands daily?" Based on this, we anticipate the mega-hit of Vision Pro and have formulated plans to create a new ecosystem it will bring about.
               `,
             ]}
             wrapper="span"
@@ -137,24 +70,52 @@ function App() {
             style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
           />
         </div>
-        <div className="w-full">
+        <div style={{ width: "16%" }} className="w-full">
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `As the story of the Fucking Early Adopted Club spread far and wide, the world couldn't help but join in on the joke. Their journey from being tech geeks to visionary artists and nature enthusiasts became an internet sensation, with memes, GIFs, and parodies dedicated to their unique quest.
-              `,
+              14000,
+              `To begin, we created 5,000 1-of-1 artists, each with their own distintive style. Every member of FEAC will base their creative activities on Vision Pro(or not) till Zuck or Musk lauches NEW-TECH gear.\n
+              Let's begin.
+              Here's our plan.`,
             ]}
             wrapper="span"
             speed={65}
             style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
           />
         </div>
-        <div className="w-full">
+        <div className="w-full text-yellow-300">
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
-              `And so, the Fucking Early Adopted Club continued to ride the wave of innovation and laughter, leaving a trail of creative inspiration and amusement wherever they went. Their NFT project and artistic endeavors became legendary, forever etched into the annals of the metaverse in a fun-loving, light-hearted way. And the moral of the story? Embrace technology, explore creativity, and never be afraid to find humor in the midst of your wildest ventures.
-              `,
+              24000,
+              `ROADMAP #1`,
+              2500,
+              `You know what? Let's not start with elaborate plans. 
+              I'm not some genius team member; I'm just a person who loves art.
+              It's like whenever I'm going through tough times, the thought of creating something makes me excited and happy (even if it's short-lived). 
+              I have so many ideas, maybe because I'm always lost in random thoughts? 
+              But executing those ideas always hits obstacles, and the most common reason is, well, money. 
+              It might sound like an excuse, but I truly believe it. 
+              Um... why am I sharing all this? Have you ever experienced something like this? 
+              Going through thoughts, actions, and failures over and over until all those failures and experiences come together, and bam! 
+              You get that eureka moment. As if all the previous failures were meant for that one thing. 
+              For me, that's FEAC - the F!@#ing Early Adopted Club. 
+              Pretty funny, right? In this ever-evolving world where new technologies and their derivatives emerge, it can be tough to keep up, right? 
+              Well, not really. Just ignore it. But I can't simply ignore my love for creation. 
+              So, I've always been refreshing the connection between my brain and the world. 
+              And then, I heard that Apple is launching Vision Pro, but it's still 2024, so there's time. 
+              I felt like this was a chance given to me by Apple. What changes when you put on glasses? 
+              What can you do with them? And then, it hit me. Let's F!@#ing Early Adopt in the Vision Pro ecosystem. 
+              We may not become Apes or Punks, but it's like doing your holiday homework in advance (if you've never done it, sorry). 
+              I dream of having a super hip artist club in the Vision Pro ecosystem, preparing for the second NFT boom through Vision Pro's mega-hit. 
+              How about it? With AR, we can bring all our works and other artists' works into our space.
+              NFTs are finally doing their thing. We'll be the first! In painting, video, 3D, music, fashion, whatever, we'll be the first through Vision Pro. 
+              Collaborating with each other, showcasing to the world, and if we get the opportunity, we can even host exhibitions together. 
+              In a world driven by technology, we'll lead with art. People with a lot to say can even open their own podcasts. 
+              All through Vision Pro. Doesn't it sound fun? These features are going to be unveiled through the FEAC app. 
+              To make it happen, we just need 4,999 more FEAC members (I'm one already), and it'll all flow smoothly. 
+              It might be just my imagination, but it's exhilarating. 
+              If you're interested in joining my imagination and making it happen together, feel free to reach out. 
+              I can't do this alone; it's impossible. Let's all enjoy this together!`,
             ]}
             wrapper="span"
             speed={65}
@@ -162,12 +123,12 @@ function App() {
           />
         </div>
       </div>
-      <div className="w-full flex justify-center fixed z-10 pr-7">
+      <div className="w-full flex justify-center fixed z-10">
         <video
+          ref={videoRef}
+          playsinline
           style={{ borderRadius: radius }}
           src={BG}
-          // width="750"
-          // height="500"
           muted
           autoPlay
           className="h-screen"
