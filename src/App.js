@@ -1,18 +1,14 @@
 import "./App.css";
 import { TypeAnimation } from "react-type-animation";
 import X from "./assets/x.png";
-import BG2 from "./assets/bg2.mp4";
-import music from "./assets/music.mp3";
 import { useEffect, useRef, useState } from "react";
 import { SiOpensea } from "react-icons/si";
 import { PiSpeakerSimpleHighFill, PiSpeakerSimpleXFill } from "react-icons/pi";
-// import { ControlBar, Player } from "video-react";
-import "./utils/slide.css";
 
 function App() {
   const videoRef = useRef();
   const [radius, setRadius] = useState(0);
-  const [audio] = useState(typeof Audio !== "undefined" && new Audio(music)); //this will prevent rendering errors on NextJS since NodeJs doesn't recognise HTML tags neither its libs.
+  const [audio] = useState(typeof Audio !== "undefined" && new Audio("https://curiyus.s3.amazonaws.com/music.mp3")); //this will prevent rendering errors on NextJS since NodeJs doesn't recognise HTML tags neither its libs.
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -33,9 +29,8 @@ function App() {
 
   return (
     <div className="w-screen relative font-vt h-screen wrap">
-      <link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
-      <audio id="audio" loop muted autoPlay>
-        <source src={music} type="audio/mp3" />
+      <audio id="audio" preload="none" loop muted autoPlay autoplay>
+        <source src={"https://curiyus.s3.amazonaws.com/music.mp3"} type="audio/mp3" />
       </audio>
       <div className="w-screen h-16 px-8 flex items-center justify-between fixed z-50 bg-opacity-50 ">
         <div className=" flex space-x-4 items-center">
@@ -102,31 +97,19 @@ function App() {
         </div>
       </div>
       <div className="w-full flex justify-center fixed z-10">
-        {/* <div
-          style={{
-            aspectRatio: "1/1",
-            height: "100svh",
-            maxWidth: "100svw",
-            width: "100svh",
-            borderRadius: radius,
-            overflow: "hidden",
-          }}
-          className="h-screen w-full"
-        >
-          <Player ref={videoRef} autoPlay muted aspectRatio="1:1">
-            <source src={BG2} />
-            <ControlBar className="opacity-0" disableDefaultControls={true} disableCompletely={true} autoHide={true} />
-          </Player>
-        </div> */}
         <video
           ref={videoRef}
           playsInline="playsinline"
-          style={{ borderRadius: radius, backgroundColor: "#000", aspectRatio: "1/1" }}
-          src={BG2}
-          muted={true}
+          style={{
+            borderRadius: "100%",
+            aspectRatio: "1/1",
+            height: "100svh",
+            width: "100svh",
+          }}
+          src={"https://curiyus.s3.amazonaws.com/bg.mp4"}
+          muted
+          preload="none"
           autoPlay="autoplay"
-          preload="true"
-          className="h-screen"
           loop={true}
           type="video/mp4"
         />
