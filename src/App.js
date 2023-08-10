@@ -14,7 +14,7 @@ function App() {
 
   const videoJsOptions = {
     autoplay: true,
-    controls: true,
+    controls: false,
     responsive: true,
     fluid: true,
     muted: true,
@@ -44,14 +44,14 @@ function App() {
   }, [isPlaying, audio]);
 
   return (
-    <div className="w-screen relative font-vt h-screen wrap overflow-x-hidden">
+    <div className="w-screen relative font-vt h-screen wrap overflow-x-hidden bg-black">
       <audio id="audio" preload="none" loop muted autoPlay autoplay>
         <source src={"https://curiyus.s3.amazonaws.com/music.mp3"} type="audio/mp3" />
       </audio>
       <div className="w-screen h-16 px-8 flex items-center justify-between fixed z-50 bg-opacity-50 ">
         <div className=" flex space-x-4 items-center">
           <button>
-            <p className="text-5xl hover:text-yellow-200">FEAC</p>
+            <p className="text-5xl hover:text-yellow-200 text-white">FEAC</p>
           </button>
           <button
             className="rounded-full flex items-center justify-center text-black  hover:text-yellow-200 pt-0.5"
@@ -61,7 +61,7 @@ function App() {
           </button>
         </div>
         <div className="flex space-x-4 items-center">
-          <SiOpensea className="w-8 h-8 hover:text-yellow-200 cursor-pointer" />
+          <SiOpensea className="w-8 h-8 hover:text-yellow-200 cursor-pointer text-white" />
           <div className="bg-black w-8 h-8 flex items-center justify-center rounded-full">
             <img src={X} className="w-7 h-7 rounded-full" alt="" />
           </div>
@@ -113,7 +113,7 @@ function App() {
         </div>
       </div>
       <div className="w-full flex justify-center fixed z-10">
-        <div style={{ height: "100svh", width: "100svw" }} className="w-full">
+        <div style={{ height: "100svh", width: "calc(100svh / 1060 * 1640)" }} className="h-full w-full ">
           <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         </div>
       </div>
