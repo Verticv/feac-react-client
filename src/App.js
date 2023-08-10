@@ -88,7 +88,7 @@ function App() {
         <div style={{ width: "16%" }} className="w-full">
           <TypeAnimation
             sequence={[
-              40000,
+              50000,
               `To begin, we created 5,000 1-of-1 artists, each with their own distintive style. Every member of FEAC will base their creative activities on Vision Pro(or not) till Zuck or Musk lauches NEW-TECH gear.\n
               Let's begin.
               Here's our plan.`,
@@ -101,7 +101,7 @@ function App() {
         <div className="w-full text-white">
           <TypeAnimation
             sequence={[
-              40000,
+              60000,
               `ROADMAP #1`,
               2500,
               `You know what? Let's not start with elaborate plans. I'm not some genius team member; I'm just a person who loves art. It's like whenever I'm going through tough times, the thought of creating something makes me excited and happy (even if it's short-lived).  I have so many ideas, maybe because I'm always lost in random thoughts?  But executing those ideas always hits obstacles, and the most common reason is, well, money.  It might sound like an excuse, but I truly believe it.  Um... why am I sharing all this? Have you ever experienced something like this?  Going through thoughts, actions, and failures over and over until all those failures and experiences come together, and bam!  You get that eureka moment. As if all the previous failures were meant for that one thing.  For me, that's FEAC - the F!@#ing Early Adopted Club.  Pretty funny, right? In this ever-evolving world where new technologies and their derivatives emerge, it can be tough to keep up, right?  Well, not really. Just ignore it. But I can't simply ignore my love for creation.  So, I've always been refreshing the connection between my brain and the world.  And then, I heard that Apple is launching Vision Pro, but it's still 2024, so there's time.  I felt like this was a chance given to me by Apple. What changes when you put on glasses?  What can you do with them? And then, it hit me. Let's F!@#ing Early Adopt in the Vision Pro ecosystem.  We may not become Apes or Punks, but it's like doing your holiday homework in advance (if you've never done it, sorry).  I dream of having a super hip artist club in the Vision Pro ecosystem, preparing for the second NFT boom through Vision Pro's mega-hit.  How about it? With AR, we can bring all our works and other artists' works into our space. NFTs are finally doing their thing. We'll be the first! In painting, video, 3D, music, fashion, whatever, we'll be the first through Vision Pro.  Collaborating with each other, showcasing to the world, and if we get the opportunity, we can even host exhibitions together.  In a world driven by technology, we'll lead with art. People with a lot to say can even open their own podcasts.  All through Vision Pro. Doesn't it sound fun? These features are going to be unveiled through the FEAC app.  To make it happen, we just need 4,999 more FEAC members (I'm one already), and it'll all flow smoothly.  It might be just my imagination, but it's exhilarating.  If you're interested in joining my imagination and making it happen together, feel free to reach out.  I can't do this alone; it's impossible. Let's all enjoy this together!`,
