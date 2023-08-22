@@ -1,6 +1,5 @@
 import "./App.css";
 import X from "./assets/x.png";
-import BG from "./assets/bg.mp4";
 import { useEffect, useRef, useState } from "react";
 import { SiOpensea } from "react-icons/si";
 import { PiSpeakerSimpleHighFill, PiSpeakerSimpleXFill } from "react-icons/pi";
@@ -20,7 +19,7 @@ function App() {
     muted: true,
     sources: [
       {
-        src: BG,
+        src: "https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/feac_main_real.mp4",
         type: "video/mp4",
       },
     ],
