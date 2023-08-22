@@ -53,7 +53,7 @@ function App() {
             <p className="text-5xl hover:text-yellow-200 text-white">FEAC</p>
           </button>
           <button
-            className="rounded-full flex items-center justify-center text-black  hover:text-yellow-200 pt-0.5"
+            className="rounded-full flex items-center justify-center text-white  hover:text-yellow-200 pt-0.5"
             onClick={() => setIsPlaying(!isPlaying)}
           >
             {isPlaying ? <PiSpeakerSimpleHighFill className="w-6 h-6" /> : <PiSpeakerSimpleXFill className="w-6 h-6" />}
@@ -61,9 +61,11 @@ function App() {
         </div>
         <div className="flex space-x-4 items-center">
           <SiOpensea className="w-8 h-8 hover:text-yellow-200 cursor-pointer text-white" />
-          <div className="bg-black w-8 h-8 flex items-center justify-center rounded-full">
-            <img src={X} className="w-7 h-7 rounded-full" alt="" />
-          </div>
+          <a href="https://twitter.com/WE_ARE_FEAC" target="_blank" rel="noopener noreferrer">
+            <button className="bg-white hover:bg-yellow-200 w-8 h-8 flex items-center justify-center rounded-full group">
+              <img src={X} className="w-7 h-7 rounded-full group-hover:opacity-75" alt="" />
+            </button>
+          </a>
         </div>
       </div>
       <div
