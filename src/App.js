@@ -73,7 +73,7 @@ function App() {
         <div style={{ width: "16%" }} className="w-full">
           <TypeAnimation
             sequence={[
-              40000,
+              // 40000,
               `Hello world..
               We are F!@#ing Early Adopted Club(FEAC).
               FEAC was born from the concern of "How should we (artists) respond as new technologies are released daily, and the scope of AI's influence expands daily?" Based on this, we anticipate the mega-hit of Vision Pro and have formulated plans to create a new ecosystem it will bring about.
@@ -84,7 +84,7 @@ function App() {
             style={{ fontSize: "1.5rem", whiteSpace: "pre-line", textShadow: "#00000050 1px 1px 2px" }}
           />
         </div>
-        <div style={{ width: "16%" }} className="w-full">
+        {/* <div style={{ width: "16%" }} className="w-full">
           <TypeAnimation
             sequence={[
               50000,
@@ -109,7 +109,7 @@ function App() {
             speed={65}
             style={{ fontSize: "1.5rem", whiteSpace: "pre-line" }}
           />
-        </div>
+        </div> */}
       </div>
       <div className="w-full flex justify-center fixed z-10">
         <div style={{ height: "100svh", width: "calc(100svh / 1060 * 1640)" }} className="h-full w-full ">
