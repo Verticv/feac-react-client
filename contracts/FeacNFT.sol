@@ -32,7 +32,7 @@ contract FeacNFT is ERC721, Ownable {
         baseTokenUri = baseTokenUri_;
     }
 
-    function tokenUri(
+    function tokenURI(
         uint256 tokenId_
     ) public view override returns (string memory) {
         require(_exists(tokenId_), "Token does not exist");
@@ -51,5 +51,21 @@ contract FeacNFT is ERC721, Ownable {
             ""
         );
         require(success, "withdraw failed");
+    }
+
+    function mint(uint256 quantity_) public payable {
+        require(isPublicMintEnabled, "minting not enabled");
+        require(msg.value == quantity_ * mintPrice, "wrong mint value");
+        require(totalSupply + quantity_ <= maxSupply, "sold out");
+        require(
+            walletMints[msg.sender] + quantity_ <= maxPerWallet,
+            "exceed max wallet"
+        );
+
+        for(uint256 i = 0; i < quantity_; i++) {
+            uint newTokenId = totalSupply + 1;
+            totalSupply++;
+            _safeMint(msg.sender, newTokenId);
+        }
     }
 }
