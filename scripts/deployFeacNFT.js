@@ -1,10 +1,10 @@
-const hre = require("hardhat");
+const hardhat = require("hardhat");
 
 async function main() {
-  const FeacNFT = await hre.ethers.getContractFactory("FeacNFT");
+  const FeacNFT = await hardhat.ethers.getContractFactory("FeacNFT");
   const feacNFT = await FeacNFT.deploy();
 
-  await feacNFT.deployed();
+  await feacNFT.waitForDeployment();
 
   console.log("FeacNFT deployed to:", feacNFT.address);
 }
