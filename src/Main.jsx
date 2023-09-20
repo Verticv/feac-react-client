@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 // import { ethers, BigNumber } from "ethers";
 import feacNFT from "./FeacNFT.json";
-const ethers = require("ethers");
-const { BigNumber } = require("ethers");
+const { ethers } = require("ethers");
 
 const feacNFTAddress = "0xF4409b32A7a8aE418D154aC3F5E1998d20AED963";
 
@@ -13,11 +12,14 @@ const Main = ({ accounts, setAccounts }) => {
   async function handleMint() {
     if (window.ethereum) {
       const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = provider.getSigner();
+      const signer = await provider.getSigner();
       const contract = new ethers.Contract(feacNFTAddress, feacNFT.abi, signer);
 
       try {
-        const response = await contract.mint(BigNumber.from(mintAmount));
+        const valueInWei = ethers.parseEther((0.02 * mintAmount).toString());
+        const response = await contract.mint(mintAmount, {
+          value: valueInWei,
+        });
         console.log("Response : ", response);
       } catch (err) {
         console.log("error : ", err);

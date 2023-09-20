@@ -11,7 +11,7 @@ function App() {
   const playerRef = useRef(null);
 
   const videoJsOptions = {
-    autoplay: true,
+    autoPlay: true,
     controls: false,
     responsive: true,
     fluid: true,
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="w-screen relative font-vt h-screen wrap overflow-x-hidden bg-black">
-      <audio id="audio" preload="none" loop muted autoPlay autoplay>
+      <audio id="audio" preload="none" loop muted autoPlay>
         <source src={"https://curiyus.s3.amazonaws.com/music.mp3"} type="audio/mp3" />
       </audio>
       <NavBar accounts={accounts} setAccounts={setAccounts} setIsPlaying={setIsPlaying} isPlaying={isPlaying} />
