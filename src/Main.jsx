@@ -16,7 +16,7 @@ const Main = ({ accounts, setAccounts }) => {
       const contract = new ethers.Contract(feacNFTAddress, feacNFT.abi, signer);
 
       try {
-        const valueInWei = ethers.parseEther((0.02 * mintAmount).toString());
+        const valueInWei = ethers.parseEther((0.001 * mintAmount).toString());
         const response = await contract.mint(mintAmount, {
           value: valueInWei,
         });
