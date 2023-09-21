@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import feacNFT from "./FeacNFT.json";
 const { ethers } = require("ethers");
 
-const feacNFTAddress = "0xF4409b32A7a8aE418D154aC3F5E1998d20AED963";
+const feacNFTAddress = "0xf676a7B25d1dD1DC86362bAEB58474a2BfD5D318";
 
 const Main = ({ accounts, setAccounts }) => {
   const [mintAmount, setMintAmount] = useState(1);
