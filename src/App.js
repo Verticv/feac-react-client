@@ -11,7 +11,7 @@ function App() {
   const playerRef = useRef(null);
 
   const videoJsOptions = {
-    autoPlay: true,
+    autoplay: true,
     controls: false,
     responsive: true,
     fluid: true,
