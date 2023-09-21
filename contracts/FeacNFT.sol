@@ -19,6 +19,7 @@ contract FeacNFT is ERC721, Ownable {
         totalSupply = 0;
         maxSupply = 1000;
         maxPerWallet = 3;
+        withdrawWallet = payable(0xb768E5cbe42F418d930C09aEaBf377B657d94aBE);
         // SET WITHDRAW WALLET ADDRESS
     }
 
