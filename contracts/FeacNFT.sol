@@ -15,7 +15,7 @@ contract FeacNFT is ERC721, Ownable {
     mapping(address => uint256) public walletMints;
 
     constructor() payable ERC721("FeacNFT", "FC") {
-        mintPrice = 0.02 ether;
+        mintPrice = 0.001 ether;
         totalSupply = 0;
         maxSupply = 1000;
         maxPerWallet = 3;
