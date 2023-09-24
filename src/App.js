@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
-import Main from "./Main";
+// import Main from "./Main";
 import VideoJS from "./VideoJS";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   const playerRef = useRef(null);
 
   const videoJsOptions = {
-    autoPlay: true,
+    autoplay: true,
     controls: false,
     responsive: true,
     fluid: true,
@@ -47,7 +47,7 @@ function App() {
         <source src={"https://curiyus.s3.amazonaws.com/music.mp3"} type="audio/mp3" />
       </audio>
       <NavBar accounts={accounts} setAccounts={setAccounts} setIsPlaying={setIsPlaying} isPlaying={isPlaying} />
-      <Main accounts={accounts} setAccounts={setAccounts} />
+      {/* <Main accounts={accounts} setAccounts={setAccounts} /> */}
       <div className="w-full flex justify-center fixed z-10">
         <div style={{ height: "100svh", width: "calc(100svh / 1060 * 1640)" }} className="h-full w-full ">
           <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
