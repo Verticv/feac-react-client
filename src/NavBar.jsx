@@ -36,11 +36,9 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
             <p className="text-3xl hover:text-yellow-200 text-white">CONNECT WALLET</p>
           </button>
         )} */}
-        <a href="https://opensea.io/collection/feac/drop" target="_blank" rel="noopener noreferrer">
           <button>
             <p className="text-3xl hover:text-yellow-200 text-white">OPENSEA</p>
           </button>
-        </a>
         <a href="https://twitter.com/WE_ARE_FEAC" target="_blank" rel="noopener noreferrer">
           <button>
             <p className="text-3xl hover:text-yellow-200 text-white">X(TWIITER)</p>
