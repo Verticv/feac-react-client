@@ -1,7 +1,7 @@
 import React from "react";
 // import { PiSpeakerSimpleHighFill, PiSpeakerSimpleXFill } from "react-icons/pi";
 
-const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
+const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying,setShow }) => {
   // const isConnected = Boolean(accounts[0]);
 
   // async function connectAccount() {
@@ -16,9 +16,9 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
   return (
     <div className="w-screen h-16 px-8 flex items-center justify-between fixed z-50 bg-opacity-50 ">
       <div className=" flex space-x-4 items-center">
-        <button>
+        <a href="/">
           <p className="text-5xl hover:text-yellow-200 text-white">FEAC</p>
-        </button>
+        </a>
         {/* <button
           className="rounded-full flex items-center justify-center text-white  hover:text-yellow-200 pt-0.5"
           onClick={() => setIsPlaying(!isPlaying)}
@@ -36,9 +36,12 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
             <p className="text-3xl hover:text-yellow-200 text-white">CONNECT WALLET</p>
           </button>
         )} */}
-          <button>
-            <p className="text-3xl hover:text-yellow-200 text-white">OPENSEA</p>
-          </button>
+        <button onClick={() => setShow(true)}>
+          <p className="text-3xl hover:text-yellow-200 text-white">WALLET-CHECKER</p>
+        </button>
+        <button>
+          <p className="text-3xl hover:text-yellow-200 text-white">OPENSEA</p>
+        </button>
         <a href="https://twitter.com/WE_ARE_FEAC" target="_blank" rel="noopener noreferrer">
           <button>
             <p className="text-3xl hover:text-yellow-200 text-white">X(TWIITER)</p>

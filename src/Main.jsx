@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { ethers, BigNumber } from "ethers";
 import feacNFT from "./FeacNFT.json";
+import axios from "axios";
 const { ethers } = require("ethers");
 
 const feacNFTAddress = "0xf676a7B25d1dD1DC86362bAEB58474a2BfD5D318";
@@ -8,6 +9,16 @@ const feacNFTAddress = "0xf676a7B25d1dD1DC86362bAEB58474a2BfD5D318";
 const Main = ({ accounts, setAccounts }) => {
   const [mintAmount, setMintAmount] = useState(1);
   const isConnected = Boolean(accounts[0]);
+
+  useEffect(() => {
+    const input = 'ghjk'
+    const getJsons = async () => {
+      return { a: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/a.json')).data, b: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/b.json')).data }
+    }
+    getJsons().then((jsons) => {
+      console.log(jsons.a.includes(input), jsons.b.includes(input))
+    })
+  }, [])
 
   async function handleMint() {
     if (window.ethereum) {
