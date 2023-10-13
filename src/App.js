@@ -19,10 +19,10 @@ function App() {
       return { a: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/a.json')).data, b: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/b.json')).data }
     }
     getJsons().then((jsons) => {
-      if (jsons.a.includes(addressValue)) {
-        setAddressStatus("FEALIST")
-      } else if (jsons.b.includes(addressValue)) {
+      if (jsons.b.includes(addressValue)) {
         setAddressStatus("OG")
+      } else if (jsons.a.includes(addressValue)) {
+        setAddressStatus("FEALIST")
       } else {
         setAddressStatus("none")
       }
