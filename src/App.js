@@ -19,6 +19,9 @@ function App() {
       return { a: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/a.json')).data, b: (await axios.get('https://seongilshinamg.s3.ap-northeast-2.amazonaws.com/b.json')).data }
     }
     getJsons().then((jsons) => {
+      if (jsons.b.includes(addressValue) && jsons.a.includes(addressValue)) {
+        setAddressStatus("BOTH")
+      }
       if (jsons.b.includes(addressValue)) {
         setAddressStatus("OG")
       } else if (jsons.a.includes(addressValue)) {
@@ -74,7 +77,7 @@ function App() {
               <input className="w-80 h-10 bg-white z-50 rounded px-3 outline-none" placeholder="Wallet address" value={addressValue} onChange={e => setAddressValue(e.target.value)} />
               <button className="px-4 h-10 bg-white rounded ml-2" onClick={validate}>Check</button>
             </div>
-            <p className="text-white text-lg">{addressStatus === "none" ? "NOT FEALISTED" : addressStatus === "FEALIST" ? "FEALISTED" : addressStatus === "OG" ? "OG FEAC" : ""}</p>
+            <p className="text-white text-lg">{addressStatus === "BOTH" ? "OG FEAC & FEALISTED" : addressStatus === "none" ? "NOT FEALISTED" : addressStatus === "FEALIST" ? "FEALISTED" : addressStatus === "OG" ? "OG FEAC" : ""}</p>
 
           </div>
         )}
