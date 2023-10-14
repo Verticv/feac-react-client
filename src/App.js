@@ -21,8 +21,7 @@ function App() {
     getJsons().then((jsons) => {
       if (jsons.b.includes(addressValue) && jsons.a.includes(addressValue)) {
         setAddressStatus("BOTH")
-      }
-      if (jsons.b.includes(addressValue)) {
+      } else if (jsons.b.includes(addressValue)) {
         setAddressStatus("OG")
       } else if (jsons.a.includes(addressValue)) {
         setAddressStatus("FEALIST")
