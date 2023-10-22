@@ -20,16 +20,20 @@ const MainPage = () => {
           </button>
         </Link>
       </div>
-      <div style={{ height: "calc(100svh - 10rem)" }} className="h-full flex flex-col-reverse sm:flex-row items-center justify-center z-10 pb-20">
+      <div style={{ height: "calc(100svh - 13rem)" }} className="h-full flex flex-col-reverse sm:flex-row items-center justify-center z-10 pb-20">
         <div className='sm:w-1/2 mt-8 sm:mt-0'>
           <img src={logo} alt="" className='h-32 object-contain' />
           <div className='flex items-center '>
-            <p className='mt-6 sm:mt-12 text-lg text-gray-800'>F&*!ing Early Adopted Club</p>
+            <p className='mt-6 sm:mt-12 text-xl text-gray-800'>F_-_ing Early Adopted Club</p>
           </div>
         </div>
-        <div className='sm:w-1/2'>
+        <div className='sm:w-1/2 pt-8 pb-4'>
           <img src={main} alt="" className='w-full h-full object-contain rounded-lg' />
         </div>
+      </div>
+      <div className="flex h-12 space-x-8 items-center justify-between py-4 z-50 relative bg-red-10 font-vt text-xl text-gray-400">
+        <p>Designed in NY, Operated in Seoul</p>
+        <p>FOUNDED 2023 by F*ing Early Adopters</p>
       </div>
 
     </div>

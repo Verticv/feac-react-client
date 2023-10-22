@@ -29,11 +29,11 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
         </button> */}
       </div>
       <div className="flex space-x-6 sm:space-x-10 items-center">
-        {/* <Link to="/mission">
+        <Link to="/mission">
           <button>
             <p className="hover:text-yellow-200 text-white">Mission</p>
           </button>
-        </Link> */}
+        </Link>
         <Link to="/wallet-checker">
           <button>
             <p className="hover:text-yellow-200 text-white">Wallet checker</p>
