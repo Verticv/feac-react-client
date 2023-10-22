@@ -1,7 +1,9 @@
 import React from "react";
 // import { PiSpeakerSimpleHighFill, PiSpeakerSimpleXFill } from "react-icons/pi";
+import logo from "./assets/logo.png"
+import { Link } from "react-router-dom";
 
-const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying,setShow }) => {
+const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying }) => {
   // const isConnected = Boolean(accounts[0]);
 
   // async function connectAccount() {
@@ -14,11 +16,11 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying,setShow }) => {
   // }
 
   return (
-    <div className="w-screen h-16 px-8 flex items-center justify-between fixed z-50 bg-opacity-50 ">
-      <div className=" flex space-x-4 items-center">
-        <a href="/">
-          <p className="text-5xl hover:text-yellow-200 text-white">FEAC</p>
-        </a>
+    <div className="w-screen h-20 px-5 sm:px-10 lg:px-24 flex items-center justify-between z-50 relative">
+      <div className="flex space-x-4 items-center">
+        <Link to="/">
+          <img src={logo} style={{ filter: "brightness(0) invert(1)" }} alt="feac" className="h-7 object-contain" />
+        </Link>
         {/* <button
           className="rounded-full flex items-center justify-center text-white  hover:text-yellow-200 pt-0.5"
           onClick={() => setIsPlaying(!isPlaying)}
@@ -26,28 +28,19 @@ const NavBar = ({ accounts, setAccounts, setIsPlaying, isPlaying,setShow }) => {
           {isPlaying ? <PiSpeakerSimpleHighFill className="w-6 h-6" /> : <PiSpeakerSimpleXFill className="w-6 h-6" />}
         </button> */}
       </div>
-      <div className="flex space-x-10 items-center">
-        {/* {isConnected ? (
+      <div className="flex space-x-6 sm:space-x-10 items-center">
+        {/* <Link to="/mission">
           <button>
-            <p className="text-3xl text-green-500">CONNECTED</p>
+            <p className="hover:text-yellow-200 text-white">Mission</p>
           </button>
-        ) : (
-          <button onClick={connectAccount}>
-            <p className="text-3xl hover:text-yellow-200 text-white">CONNECT WALLET</p>
-          </button>
-        )} */}
-        <button onClick={() => setShow(true)}>
-          <p className="text-3xl hover:text-yellow-200 text-white">WALLET-CHECKER</p>
-        </button>
-        <button>
-          <p className="text-3xl hover:text-yellow-200 text-white">OPENSEA</p>
-        </button>
-        <a href="https://twitter.com/WE_ARE_FEAC" target="_blank" rel="noopener noreferrer">
+        </Link> */}
+        <Link to="/wallet-checker">
           <button>
-            <p className="text-3xl hover:text-yellow-200 text-white">X(TWIITER)</p>
+            <p className="hover:text-yellow-200 text-white">Wallet checker</p>
           </button>
-        </a>
+        </Link>
       </div>
+
     </div>
   );
 };
