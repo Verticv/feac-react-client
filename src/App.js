@@ -11,7 +11,7 @@ function App() {
   const [accounts, setAccounts] = useState([]);
 
   return (
-    <div className="w-screen relative h-screen wrap overflow-x-hidden bg-black">
+    <div className="w-screen relative wrap overflow-x-hidden bg-black">
       <NavBar accounts={accounts} setAccounts={setAccounts} setIsPlaying={setIsPlaying} isPlaying={isPlaying} />
       <Routes>
         <Route path="/*" element={<MainPage />} />

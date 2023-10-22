@@ -25,9 +25,9 @@ const WalletChecker = () => {
 
 
   return (
-    <div style={{ height: "calc(100svh - 5rem)" }} className="w-full relative flex items-center h-full justify-center fixed z-10">
+    <div style={{ height: "calc(100svh - 5rem)" }} className="w-full relative flex items-center h-full justify-center fixed z-10 px-4">
 
-      <div className=" flex bg-black w-96 shadow flex-col">
+      <div className=" flex bg-black w-full sm:w-96 shadow flex-col">
         <p className="text-white text-lg">WALLET CHECKER</p>
         <div className="flex">
           <input className="w-80 h-10 bg-white z-50 rounded px-3 outline-none" placeholder="Wallet address" value={addressValue} onChange={e => setAddressValue(e.target.value)} />
