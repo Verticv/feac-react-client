@@ -4,19 +4,25 @@ import main from "../assets/main.png"
 import { Link } from 'react-router-dom'
 import { SiOpensea } from 'react-icons/si'
 import { FaXTwitter } from 'react-icons/fa6'
+import { BsDiscord } from 'react-icons/bs'
 
 const MainPage = () => {
   return (
     <div style={{ minHeight: "calc(100svh - 5rem)" }} className="bg-gray-200 px-5 lg:px-24 w-full h-full ">
-      <div className="flex h-20 space-x-8 items-center justify-end py-4 z-50 relative">
+      <div className="flex h-20 space-x-6 items-center justify-end py-4 z-50 relative">
+        <Link to="https://discord.gg/8y5DC5Vuue">
+          <button>
+            <BsDiscord className="text-black w-7 h-7" />
+          </button>
+        </Link>
         <Link to="https://opensea.io/collection/feac/drop">
           <button>
-            <SiOpensea className="text-black w-8 h-8" />
+            <SiOpensea className="text-black w-7 h-7" />
           </button>
         </Link>
         <Link to="https://twitter.com/WE_ARE_FEAC">
           <button>
-            <FaXTwitter className="text-black w-6 h-6" />
+            <FaXTwitter className="text-black w-7 h-7" />
           </button>
         </Link>
       </div>
